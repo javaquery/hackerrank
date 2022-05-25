@@ -1,0 +1,21 @@
+plugins {
+    id 'java'
+}
+
+sourceCompatibility = 1.8
+group 'com.javaquery'
+version '1.0.0'
+
+repositories {
+    mavenCentral()
+}
+
+dependencies {
+    implementation('org.slf4j:slf4j-api:+')
+    implementation('org.json:json:+')
+    implementation group: 'com.fasterxml.jackson.core', name: 'jackson-annotations', version: '2.13.2'
+
+    testImplementation 'net.logstash.logback:logstash-logback-encoder:6.6'
+    testImplementation group: 'ch.qos.logback', name: 'logback-classic', version: '+'
+    testImplementation('org.junit.jupiter:junit-jupiter:5.7.0')
+}
